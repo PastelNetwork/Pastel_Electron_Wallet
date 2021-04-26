@@ -1,6 +1,6 @@
 import fs from 'fs-extra'
 import path from 'path'
-import { Database } from 'sql.js'
+import initSqlJs, { Database } from 'sql.js'
 
 import {
   create_block,
@@ -22,8 +22,6 @@ import {
   create_txoutsetinfo,
   create_walletinfo,
 } from './constants'
-
-const initSqlJs = require('./sql-wasm.js')
 
 export const createDatabase = async (): Promise<Database> => {
   const SQL = await initSqlJs({
