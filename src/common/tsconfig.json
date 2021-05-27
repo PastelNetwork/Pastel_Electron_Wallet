@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "noEmit": false
+  },
+  "include": [
+    "assets",
+    "components",
+    "theme",
+    "utils",
+    "declarations",
+    "index.ts"
+  ]
+}
