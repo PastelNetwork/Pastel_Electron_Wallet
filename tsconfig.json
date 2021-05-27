@@ -70,5 +70,6 @@
     "src/common/utils",
     "src/common/declarations",
     "src/common/index.ts"
-  ]
+  ],
+  "files": ["./src/common/index.ts"]
 }

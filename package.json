@@ -12,7 +12,7 @@
     "email": "support@pastel.network"
   },
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "index.js",
   "hostUrl": "https://update.electronjs.org",
   "repoName": "pastelnetwork/pastel-electron-wallet",
   "protocolSchemes": {

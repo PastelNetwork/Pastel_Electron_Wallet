@@ -1,6 +1,6 @@
 import React from 'react'
 import Downshift from 'downshift'
-import caretDownIcon from '../../../common/assets/icons/ico-caret-down.svg'
+// import caretDownIcon from '../../common/assets/icons/ico-caret-down.svg'
 import cn from 'classnames'
 
 export type Option = {
@@ -51,11 +51,11 @@ export default function Select({
             {label && <span className='text-gray-b0 mr-2'>{label}:</span>}
             {selectedItem ? selectedItem.value : placeholder}
           </div>
-          <img
-            className='text-gray-b0 ml-2'
-            src={caretDownIcon}
-            alt='toggle menu'
-          />
+          {/*<img*/}
+          {/*  className='text-gray-b0 ml-2'*/}
+          {/*  src={caretDownIcon}*/}
+          {/*  alt='toggle menu'*/}
+          {/*/>*/}
           <ul
             {...getMenuProps()}
             className='absolute top-full left-0 min-w-full mt-px rounded-md overflow-hidden bg-white border-gray-e6 shadow-16'
