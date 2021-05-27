@@ -7,7 +7,7 @@
     "allowJs": false,
     "checkJs": false,
     "resolveJsonModule": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "declaration": true,
     "declarationMap": false,
     "sourceMap": false,
@@ -16,7 +16,7 @@
     // "rootDir": "./",
     // "composite": true,
     // "removeComments": true,
-    "noEmit": true,
+    "noEmit": false,
     // "importHelpers": true,
     // "downlevelIteration": true,
     "isolatedModules": true,
@@ -60,7 +60,15 @@
 
     /* Experimental Options */
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "outDir": "./dist"
   },
-  "include": ["src"]
+  "include": [
+    "src/common/assets",
+    "src/common/components",
+    "src/common/theme",
+    "src/common/utils",
+    "src/common/declarations",
+    "src/common/index.ts"
+  ]
 }
