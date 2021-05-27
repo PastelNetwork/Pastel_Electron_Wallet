@@ -1,10 +1,12 @@
-@import 'tailwindcss/base';
+/* @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+ 
 
 @layer base {
   h1 {
@@ -26,6 +28,7 @@
     @apply text-h6;
   }
 }
+*/
 
 @import '@fortawesome/fontawesome-free/css/all.css';
 @import 'typeface-roboto/index.css';
