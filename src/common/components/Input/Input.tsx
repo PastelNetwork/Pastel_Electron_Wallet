@@ -19,7 +19,7 @@ export type TInput = {
   errorMessage?: string | null
   disabled?: boolean
   placeholder?: string
-  [x: string]: React.MouseEventHandler<Element> | ReactNode | string | undefined
+  [x: string]: ReactNode | string | undefined
 }
 
 const Input: React.FC<TInput> = React.forwardRef(

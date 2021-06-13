@@ -8,7 +8,7 @@ ReactModal.setAppElement('#root')
 
 export type TModal = {
   isOpen: boolean
-  handleClose?: React.MouseEventHandler<Element>
+  handleClose?: (event: React.MouseEvent<HTMLButtonElement>) => void
   size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'
   children?: ReactNode
 }

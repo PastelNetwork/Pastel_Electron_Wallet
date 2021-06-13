@@ -2,7 +2,7 @@ import React from 'react'
 import cn from 'classnames'
 
 export type TCloseButton = {
-  onClick?: React.MouseEventHandler
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
   className?: string
   disabled?: boolean
 }

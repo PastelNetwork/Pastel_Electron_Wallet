@@ -19,7 +19,7 @@ export type TBaseProps = {
 
 export type TOptionsProps = TBaseProps & {
   options: TOption[]
-  onChange: (option: TOption | null) => void
+  onChange?: (option: TOption | null) => void
   selected?: TOption | null
 }
 

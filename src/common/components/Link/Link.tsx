@@ -6,7 +6,7 @@ export type TLink = {
   className?: string
   href?: string
   variant?: string
-  [x: string]: React.MouseEventHandler<Element> | ReactNode | string | undefined
+  [x: string]: ReactNode | string | undefined
 }
 
 const Link: React.FC<TLink> = ({
@@ -16,8 +16,6 @@ const Link: React.FC<TLink> = ({
   variant,
   ...otherProps
 }) => {
-  const Tag = href ? 'a' : 'button'
-
   const classes = cn(
     {
       'text-button focus:outline-none hover:text-button-hover active:text-button-active transition duration-300': true,
@@ -28,9 +26,9 @@ const Link: React.FC<TLink> = ({
   )
 
   return (
-    <Tag href={href} className={classes} {...otherProps}>
+    <a href={href} className={classes} {...otherProps}>
       {children}
-    </Tag>
+    </a>
   )
 }
 

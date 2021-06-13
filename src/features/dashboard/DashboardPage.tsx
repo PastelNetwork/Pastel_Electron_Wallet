@@ -11,6 +11,8 @@ import smallImage from '../../common/assets/images/mock/small-image.png'
 import image from '../../common/assets/images/nft-card-placeholder.png'
 import { formatNumber } from '../../common/utils/format'
 
+import App from '../../common/views/app'
+
 const date = dayjs('2021-04-04')
 
 const walletBalance = 32000
@@ -150,6 +152,7 @@ export default function DashboardPage(): JSX.Element {
           </div>
           <LinkSection to='#'>Check all notifications</LinkSection>
         </div>
+        <App></App>
       </div>
     </div>
   )

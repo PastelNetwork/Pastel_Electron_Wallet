@@ -75,6 +75,46 @@
   .page-container {
     @apply px-20px md:px-30px lg:px-60px;
   }
+
+  .react-datepicker-popper {
+    z-index: 3;
+  }
+  .react-datepicker-popper[data-placement^='bottom'] {
+    margin-top: 1px;
+  }
+
+  /* Header styles */
+  .react-datepicker__header {
+    @apply bg-white border-none pt-0;
+  }
+
+  /* Day name styles */
+  .react-datepicker__day-name {
+    @apply w-8 leading-8 m-1 text-button-text font-roman text-15px;
+  }
+
+  /* Day styles */
+  .react-datepicker__day {
+    @apply text-gray-4a font-roman text-15px w-8 leading-8 m-1;
+  }
+  .react-datepicker__day:hover {
+    @apply bg-gray-a0;
+  }
+
+  /* Day outside month styles */
+  .react-datepicker__day--outside-month {
+    @apply text-gray-a0;
+  }
+
+  /* Selected day styles */
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected {
+    @apply bg-navigation-selected text-white;
+  }
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected:hover {
+    @apply bg-navigation-selected text-white !important;
+  }
 }
 
 @tailwind utilities;
@@ -128,7 +168,7 @@ body,
 }
 .custom-scroll .simplebar-track.simplebar-vertical {
   box-shadow: inset 0.188rem 0px 0px 0px rgba(196, 196, 196, 0.3);
-  width: 1.875rem !important;
+  right: -1.875rem !important;
 }
 
 /* HORIZONTAL SCROLLBAR */
@@ -263,31 +303,7 @@ input[type='number']::-webkit-outer-spin-button {
   visibility: visible;
 }
 
-::-webkit-scrollbar {
-  width: 3px;
-  -webkit-border-radius: 3px;
-}
-
-/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
-::-webkit-scrollbar-thumb:vertical {
-  background-color: rgb(166, 176, 194, 0.5);
-  opacity: 0.5;
-  -webkit-border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:vertical:active {
-  background-color: rgb(166, 176, 194, 0.5);
-  -webkit-border-radius: 3px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: rgba(196, 196, 196, 0.2);
-  border-radius: 3px;
-}
 .focus-visible:focus-visible {
   @apply border;
   @apply border-blue-3f;
-}
-
-.widget-ratings {
-  display: flex !important;
 }

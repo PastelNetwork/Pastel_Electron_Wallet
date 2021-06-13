@@ -7,7 +7,8 @@ export type TIconButton = {
   children: ReactNode | null
   hoverColor?: string
   activeColor?: string
-  [x: string]: React.MouseEventHandler<Element> | ReactNode | string | undefined
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
+  [x: string]: ReactNode | string | undefined
 }
 
 export const IconButton: React.FC<TIconButton> = ({
@@ -16,6 +17,7 @@ export const IconButton: React.FC<TIconButton> = ({
   type,
   hoverColor,
   activeColor,
+  onClick,
   ...otherProps
 }) => {
   const classes = cn(
@@ -31,7 +33,7 @@ export const IconButton: React.FC<TIconButton> = ({
   )
 
   return (
-    <button className={classes} {...otherProps}>
+    <button className={classes} onClick={onClick} {...otherProps}>
       {React.cloneElement(children as React.ReactElement, {
         className: 'fill-current w-6',
       })}

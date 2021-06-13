@@ -5,29 +5,27 @@ export type TButton = {
   children?: ReactNode | string
   variant?: 'default' | 'secondary' | 'transparent' | 'navigation'
   disabled?: boolean
-  href?: string
   className?: string
   fluid?: boolean
   prepend?: ReactNode
   append?: ReactNode
   type?: 'button' | 'submit'
-  [x: string]: React.MouseEventHandler<Element> | ReactNode | string | undefined
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
+  [x: string]: ReactNode | string | undefined
 }
 
 const Button: React.FC<TButton> = ({
   children,
   variant,
-  href,
   disabled,
   prepend,
   append,
   fluid,
   type,
   className,
+  onClick,
   ...otherProps
 }) => {
-  const Tag = href ? 'a' : 'button'
-
   const classes = cn(
     {
       'button inline-flex items-center px-2 h-10 justify-center rounded-2xl transition duration-300 focus:outline-none active:shadow-none focus:shadow-btnOutline max-w-full leading-none': true,
@@ -56,14 +54,15 @@ const Button: React.FC<TButton> = ({
   return (
     <>
       {variant === 'navigation' ? (
-        <button className={navButtonClasses} {...otherProps}>
+        <button className={navButtonClasses} onClick={onClick} {...otherProps}>
           {children}
         </button>
       ) : (
-        <Tag
+        <button
           type={type}
           className={classes}
           disabled={disabled}
+          onClick={onClick}
           {...otherProps}
         >
           {prepend && (
@@ -81,10 +80,15 @@ const Button: React.FC<TButton> = ({
               })}
             </span>
           )}
-        </Tag>
+        </button>
       )}
     </>
   )
+}
+
+Button.defaultProps = {
+  type: 'button',
+  variant: 'default',
 }
 
 export default Button
